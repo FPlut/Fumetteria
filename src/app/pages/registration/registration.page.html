@@ -1,0 +1,99 @@
+<ion-header></ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col style="height:7rem">
+
+    </ion-col>
+  </ion-row>
+
+  
+      
+    <ion-row >
+      <ion-col style="text-align: center;">
+        <img src="../../../assets/icon/logo_devskill.png" alt="DevSkillLogo">
+      </ion-col>
+    </ion-row>
+      
+
+    
+      <ion-row>
+        <ion-col style="height:3rem">
+
+        </ion-col>
+      </ion-row>
+          
+        <ion-grid class="set-grid">
+          <ion-row style="height: 5rem;">
+            <ion-col style="height: 5rem;" class="ion-text-center">
+              <h6> Benvenuto nella pagina di registrazione</h6>
+            </ion-col>
+          </ion-row>
+
+
+          
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Nome</ion-label>
+                <ion-input id="nome" name="nome"></ion-input>
+                <ion-icon slot="end"name="person-sharp"></ion-icon>
+              </ion-item>
+            </ion-col>
+            
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">Cognome</ion-label>
+                <ion-input id="cognome" name="cognome"></ion-input>
+                <ion-icon slot="end" name="person-sharp"></ion-icon>
+              </ion-item>
+            </ion-col>
+          
+          </ion-row>
+          <ion-label class="pl1" style="color:#979797; font-size: small;">Inserisci nome</ion-label>
+          <ion-label style="color:#979797; font-size: small;">Inserisci cognome</ion-label>  
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label position="floating">E-mail</ion-label>
+                <ion-input id="email" name="email"></ion-input>
+                <ion-icon slot="end" name="mail-sharp"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;">Inserisci la tua e-mail</ion-label>
+
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Password</ion-label>
+                  <ion-input id="pwd" name="pwd"></ion-input>
+                  <ion-icon slot="end" name="lock-closed"></ion-icon>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;">Inserisci password</ion-label>
+
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Conferma Password</ion-label>
+                    <ion-input id="usame" name="uname"></ion-input>
+                    <ion-icon slot="end" name="lock-closed"></ion-icon>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;">conferma password</ion-label>
+              <div>
+                <ion-row>
+                  <ion-col>
+                   <ion-button shape="round">Login</ion-button>
+                  </ion-col>
+                  <ion-col style="text-align: right;">
+                    <ion-button  shape="round">Register</ion-button>
+                  </ion-col>
+                </ion-row>  
+              </div>
+        </ion-grid>
+</ion-content>
