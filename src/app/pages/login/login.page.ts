@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  titolo:string="Benvenuto";
+  percorsoImg:string="../../../assets/icon/logo_devskill.png";
+  username:string;
+  password:string;
+  regPage:string="http://localhost:8100/registration";
 
-  ngOnInit() {
+  eventClick():void{
+    window.open(this.regPage)
   }
 
+  constructor() { }
+
+  ngOnInit() {}
 }
 
 function regesterpage(){
