@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
+import { ButtonLogRegComponent } from 'src/app/components/button-log-reg/button-log-reg.component';
+import { TitleImgComponent } from 'src/app/components/title-img/title-img.component';
+import { InputItemComponent } from 'src/app/components/input-item/input-item.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    LoginPageRoutingModule,
+    
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage,ButtonLogRegComponent,TitleImgComponent,InputItemComponent]
 })
 export class LoginPageModule {}

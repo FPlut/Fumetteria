@@ -1,97 +1,44 @@
 <ion-header></ion-header>
 
 <ion-content>
-
-  <ion-row>
-    <ion-col style="height:7rem">
-
-    </ion-col>
-  </ion-row>
-
-  
-      
-    <ion-row >
-      <ion-col style="text-align: center;">
-        <img [src]="percorsoImg" alt="DevSkillLogo">
-      </ion-col>
-    </ion-row>
-      
-
     
-      <ion-row>
-        <ion-col style="height:3rem">
-
-        </ion-col>
-      </ion-row>
+    <app-title-img testo="Benvenuto nella pagina di registrazione"></app-title-img>
           
         <ion-grid class="set-grid">
-          <ion-row style="height: 5rem;">
-            <ion-col style="height: 5rem;" class="ion-text-center">
-              <h6> {{titolo}}</h6>
-            </ion-col>
+
+          <ion-row>
+            <ion-col>
+            <app-input-item id="nome" iValue="Nome" iValue2="Inserisci nome" icon = "person-sharp"></app-input-item>
+          </ion-col>
+          <ion-col>
+            <app-input-item  id="cognome" iValue="Cognome" iValue2="Inserisci cognome" icon = "person-sharp"></app-input-item>
+          </ion-col>
           </ion-row>
-
-
           
           <ion-row>
             <ion-col>
-              <ion-item>
-                <ion-label position="floating">Nome</ion-label>
-                <ion-input id="nome" [(ngModel)]="name" name="nome"></ion-input>
-                <ion-icon slot="end"name="person-sharp"></ion-icon>
-              </ion-item>
-              <ion-label style="color:#979797; font-size: small; padding:12px; ">Inserisci nome</ion-label>
-            </ion-col>
-            
-            <ion-col>
-              <ion-item>
-                <ion-label position="floating">Cognome</ion-label>
-                <ion-input id="cognome"[(ngModel)]="surname" name="cognome"></ion-input>
-                <ion-icon slot="end" name="person-sharp"></ion-icon>
-              </ion-item>
-              <ion-label class="ion-padding"style="color:#979797; font-size: small;">Inserisci cognome</ion-label>
-            </ion-col>
-          
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-item>
-                <ion-label position="floating">E-mail</ion-label>
-                <ion-input id="email" [(ngModel)]="username" name="email"></ion-input>
-                <ion-icon slot="end" name="mail-sharp"></ion-icon>
-              </ion-item>
+              <app-input-item  id="e-mail" iValue="E-mail" iValue2="Inserisci e-mail" icon = "mail-sharp"></app-input-item>
             </ion-col>
           </ion-row>
-          <ion-label class="ion-padding"  position="stacked" style="color:#979797; font-size: small;">Inserisci la tua e-mail</ion-label>
 
             <ion-row>
               <ion-col>
-                <ion-item>
-                  <ion-label position="floating">Password</ion-label>
-                  <ion-input id="pwd" [(ngModel)]="password" type="password" name="pwd"></ion-input>
-                  <ion-icon slot="end" name="lock-closed"></ion-icon>
-                </ion-item>
+                <app-input-item  id="pwd" iValue="Password" iValue2="Inserisci password" icon = "lock-closed"></app-input-item>
               </ion-col>
             </ion-row>
-            <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;">Inserisci password</ion-label>
 
               <ion-row>
                 <ion-col>
-                  <ion-item>
-                    <ion-label position="floating">Conferma Password</ion-label>
-                    <ion-input id="cpwd" [(ngModel)]="cPassword" type="password" name="cpwd"></ion-input>
-                    <ion-icon slot="end" name="lock-closed"></ion-icon>
-                  </ion-item>
+                  <app-input-item  id="cpwd" iValue="Conferma password" iValue2="Inserisci di nuovo la password" icon = "lock-closed"></app-input-item>
                 </ion-col>
               </ion-row>
-              <ion-label class="ion-padding" position="stacked" style="color:#979797; font-size: small;">conferma password</ion-label>
               <div>
-                <ion-row>
+                <ion-row style="justify-content:space-between">
                   <ion-col>
-                   <ion-button (click)="eventClick()" shape="round">Login</ion-button>
+                    <app-button-log-reg path = "/login" logOrReg="Login"></app-button-log-reg>
                   </ion-col>
-                  <ion-col style="text-align: right;">
-                    <ion-button  shape="round">Register</ion-button>
+                  <ion-col>
+                    <app-button-log-reg  logOrReg="Register"></app-button-log-reg>
                   </ion-col>
                 </ion-row>  
               </div>

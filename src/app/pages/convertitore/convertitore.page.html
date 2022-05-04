@@ -1,13 +1,6 @@
 <ion-header></ion-header>
-
-<ion-content>
-  <ion-row style="height: 5rem; ">
-    <ion-col style="height: 5rem;" class="ion-text-center">
-      <h6> {{titolo}} </h6>
-    </ion-col>
-  </ion-row>
-  
-    
+  <ion-content>
+    <app-title-img testo="Benvenuto nel convertitore"></app-title-img>
     <ion-grid class="set-grid">
       
       
@@ -19,23 +12,15 @@
               <ion-col class="ion-text-center "><h1>Gradi</h1></ion-col>
             </ion-row>
               <ion-row>
-                
                 <ion-item>
-                  <ion-label position="stacked">Celsius</ion-label>
-                  <ion-input clear-on-edit type="number" [(ngModel)]="val1" #misC name="misC" (click)="clearValC()" (keyup.enter)="getValC(misC.value)">{{displayValue2 | number : '1.0-2'}}</ion-input>
+                  <app-input-conv (eventoUnita)="aggiornaUnita($event)" (eventoConversione)="notificaConversione($event)" [valore]="val1" unita="Celsius"></app-input-conv>
                 </ion-item>
+                <ion-col>
 
+                </ion-col>
                 <ion-item>
-                  <ion-label  position="stacked">Fahrenheit </ion-label>
-                  <ion-input clear-on-edit type="number" [(ngModel)]="val2" #misF  name="misF" (click)="clearValF()" (keydown.enter)="getValF(misF.value)">{{displayValue | number : '1.0-2'}} </ion-input>
+                  <app-input-conv (eventoUnita)="aggiornaUnita($event)" (eventoConversione)="notificaConversione($event)" [valore]="val2" unita="Fahrenheit"></app-input-conv>
                 </ion-item>
-                <!--
-                <ion-item>
-                  <ion-label  position="stacked">Kelvin </ion-label>
-                  <ion-input clear-on-edit type="number" [(ngModel)]="val5" #misK  name="misK" (click)="clearValK()" (keydown.enter)="getValK(misK.value)">{{displayValue5 | number : '1.0-2'}} </ion-input>
-                </ion-item>
-                -->
-              
               </ion-row>
           </div>
           <div> 
@@ -44,16 +29,13 @@
             </ion-row>
             <ion-row>
               <ion-item>
-                <ion-label position="stacked">Chilometri</ion-label>
-                <ion-input clear-on-edit type="number" [(ngModel)]="val3" #misKm  name="misKm" (click)="clearValKm()" (keydown.enter)="getValKm(misKm.value)">{{displayValue4}}</ion-input><!-- se si aggiunge centimetri bisogna inserire questo "| number : '1.5-5'"
-                                                                                                                                                                                                                per poter vedere il risultato di cm in km e cm in Mi altrimenti si può lasciare
-                                                                                                                                                                                                                si potrebbe fare in modo che se si sta cercando di ottenere km e mi non c'è bisogno di usare "| number : '1.5-5'"
-                                                                                                                                                                                                                se invece si sta cercando di ottenere cm si attiva-->
+                <app-input-conv (eventoUnita)="aggiornaUnita($event)" (eventoConversione)="notificaConversione($event)" [valore]="val3" unita="Chilometro"></app-input-conv>
               </ion-item>
-            
+              <ion-col>
+                
+              </ion-col>
               <ion-item>
-                <ion-label position="stacked">Miglia</ion-label>
-                <ion-input clear-on-edit type="number" [(ngModel)]="val4" #misMi  name="misMi" (click)="clearValMi()" (keydown.enter)="getValMi(misMi.value)">{{displayValue3}}</ion-input>
+                <app-input-conv (eventoUnita)="aggiornaUnita($event)" (eventoConversione)="notificaConversione($event)" [valore]="val4" unita="Miglia"></app-input-conv>
               </ion-item>
                 <!--
               <ion-item>
@@ -64,9 +46,15 @@
             </ion-row>
           </div> 
         </ion-row>
+        <ion-row>
+          
+          <ion-col style="text-align: center">
+            <ion-button (click)="eventClick()" shape="round">Reset</ion-button>
+          </ion-col>
+        </ion-row>  
       </div>
         
       
     </ion-grid>
     
-</ion-content>
+  </ion-content>
