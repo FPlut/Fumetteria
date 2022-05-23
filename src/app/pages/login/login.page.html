@@ -7,8 +7,8 @@
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-label position="floating">E-mail</ion-label>
-            <ion-input id="email" formControlName="email"></ion-input>
+            <ion-label for="email" position="floating">E-mail</ion-label>
+            <ion-input id="email" formControlName="email" [(ngModel)]="email"></ion-input>
             <ion-icon slot="end" name="person-sharp"></ion-icon>
           </ion-item>
           <ion-label style="color:#979797; font-size: small; padding:12px;">Inserisci e-mail</ion-label>
@@ -17,8 +17,8 @@
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-label position="floating">Password</ion-label>
-            <ion-input id="password" formControlName="password" ></ion-input>
+            <ion-label for="password" position="floating">Password</ion-label>
+            <ion-input id="password" type="password" formControlName="password" [(ngModel)]="password"></ion-input>
             <ion-icon slot="end" name="lock-closed"></ion-icon>
           </ion-item>
           <ion-label style="color:#979797; font-size: small; padding:12px;">Inserisci password</ion-label>
@@ -31,7 +31,8 @@
           <app-button-log-reg path="/registration" logOrReg="Register"></app-button-log-reg>
         </ion-col>
         <ion-col style="text-align: right">
-          <ion-button type="submit" disabled="!ngForm.valid" shape="round">Login</ion-button>
+          <ion-button type="submit" [disabled]="!loginForm.valid" shape="round">Login
+          </ion-button>
         </ion-col>
       </ion-row>
     </div>
